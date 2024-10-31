@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Os 3 links abaixo são para linkar uma fonte importada do google fonts ao meu código -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- A fonte deve ser escrita em font-family do css entre aspas -->
+    <link rel="stylesheet" href="style.css">
+    <title>Escola DNC</title>
+</head>
+<body>
+    <!-- MENU SUPERIOR -->
+    <div id="menu_superior">
+        <img src="imagens/logo.svg" alt="DNC Logo" id="logo">
+        <h1 id="titulo_sup">Dê os primeiros passos da<br> sua carreira de tecnologia</h1>
+        <p id="texto_sup">Inscreva-se no curso gratuito de Introdução à<br> Tecnologia da DNC School e aprenda os principais<br> fundamentos para construir experiências efetivas.</p>
+    </div>
+
+    <!-- MENU INFORMATIVO -->
+    <div id="menu_inform">
+        <!-- poderia ter feito com p*3>img*3 -->
+        <p class="text_inform"><img src="icones/certificado.svg" alt="certificado" class="icone">Certificado de Conclusão</p>
+        <p class="text_inform"><img src="icones/horas.svg" alt="horários de aula" class="icone">4 horas de conteúdo</p>
+        <p class="text_inform"><img src="icones/grava.svg" alt="gravação de aula" class="icone">Aulas online gravadas</p>
+    </div>
+
+    <!-- SEÇÃO DO VÍDEO -->
+    <div id="secaovideo">
+        <iframe id="video" width="502" height="283" src="https://www.youtube.com/embed/ITxGkd9h4n4" title="DNC - A escola inovadora que forma profissionais de alta perfomance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div>
+            <h1 id="titulovideo">Aprenda com especialistas e comece seu primeiro projeto</h1><br><br>
+            <p id="textovideo">Conheça o processo de desenvolvimento e entenda como utilizar os principais métodos e ferramentas da área para resolver problemas complexos.<br><br>Conquiste seu certificado e desenvolva um projeto prático para aplicar seus conhecimentos.</p> 
+        </div>
+    </div>
+
+    <!-- CARROSEL -->
+    <div id="carrosel">
+        <h1 id="titulocarrosel">Mais de 500 alunos já iniciaram seus estudos</h1>
+        <!-- CARDS -->
+        <div id="divcards">
+            <img id="setaesquerda" onclick="RolarEsquerda()" class="seta" src="icones/setaesquerda.svg" alt="">
+            <img id="bruna" class="card" src="cards/Bruna.svg" alt="Depoimento da Bruna">
+            <img id="leo" class="card" src="cards/Leo.svg" alt="Depoimento do Leonardo">
+            <img id="samantha" class="card" src="cards/sam.svg" alt="Depoimento da Samantha">
+            <img id="setadireita" class="seta" onclick="RolarDireita()"src="icones/setadireita.svg" alt="">
+        </div>
+    </div>
+
+    <!-- tag javascript -->
+    <script src="index.js"></script>
+
+
+    <!-- FORMULÁRIO -->
+    <div id="formulario">
+        <h1 id="titulo_form">Comece agora e dê o própximo passo na sua carreira</h1>
+        <form action="https://api.sheetmonkey.io/form/hbjFqtJXdspr32CWWBPLoj" method="post">
+            <input type="text" placeholder="Nome" name='Name' required><br>
+            <input type="email" placeholder="Email" name="Email" required><br>
+            <input type="number" placeholder="Telefone" name="Phone"><br>
+            <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
+            <button type="submit">Acesse a ementa grátis</button>
+        </form>
+    </div>
+
+    <!-- <form action="https://api.sheetmonkey.io/form/hbjFqtJXdspr32CWWBPLoj" method="post">
+        <label>Your Name: <input type="text" name="Name" required /></label>
+        <label>Your Email: <input type="email" name="Email" required /></label>
+        <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
+        <input type="submit" value="Sign Up" />
+    </form> -->
+</body>
+</html>
