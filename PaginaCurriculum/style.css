@@ -1,0 +1,57 @@
+body{
+    background-color: #ece4e6;
+}
+header{
+    font-family: 'Raleway', sans-serif;
+    background-color: #6689DB;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+h1, h2, h3{
+    text-transform: uppercase;
+}
+
+#nameAndFunction{
+    background-color:#eee;
+    width:500px;
+    margin:0 auto;
+    text-align: center;
+}
+#nameAndFunction h1, h2{
+    margin:0;
+}
+
+/* CONTAINER */
+#container{
+    display:grid;
+    grid-template-columns: 30% auto;
+    grid-column-gap: 20px;
+}
+
+#sidebar, #content{
+    display:flex;
+    flex-direction: column;
+    row-gap:20px;
+}
+
+/*CSS DA SECTION COM INFORMAÇÕES DE LOCALIZAÇÃO E CONTATO*/
+#infolist{
+    list-style: none;
+}
+#infolist i{
+    width:30px;
+    color: #6689DB;
+}
+
+/* CARDS */
+.card h3{
+    font-family: 'Raleway', ;
+}
+
+.card{
+    font-family: 'Montserrat';
+    border: 1px solid #5f5c5c;
+    border-radius:15px;
+    padding:22px;
+}
