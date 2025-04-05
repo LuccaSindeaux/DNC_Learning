@@ -6,7 +6,7 @@
 // ] Listas foi comentada no aula de LocalStorage, pois agora não precisamos mais de "lista chumbada"
 
 
-//DESAFIO: Criação da barra que mostra o progresso das tarefas
+//DESAFIO: Criação da barra que mostra o progresso das tarefas 0/3,1/3 etc...
 const renderTasksProgress = (tasks) =>{
     let tasksProgress;
     const tasksProgressDOM = document.getElementById('tasks-progress');
@@ -25,14 +25,14 @@ const renderTasksProgress = (tasks) =>{
 }
 
 
-//Funções para que a çista fique salva no loaclStorage do navegador
+//Funções para que a lista fique salva no loaclStorage do navegador
 const setTasksInLocalStorage = (tasks) => {
     window.localStorage.setItem('tasks', JSON.stringify(tasks)); //converte em string no navegador.
 }
 
 const getTasksFromLocalStorage = () => {
     const localTasks = JSON.parse(window.localStorage.getItem('tasks')); //transforma string em parse/código a ser lido, se não ele não entraia no array do código JS.
-    return localTasks ? localTasks : []; //se a tarefa exitir retorna elas, s enão retornará um array vazio.
+    return localTasks ? localTasks : []; //se a tarefa exitir retorna elas, se não retornará um array vazio.
 }
 
 const removeTask = (taskId) => {
@@ -61,7 +61,7 @@ const removeDoneTasks = () => {
     })
 }
 
-//Função de checkbox marcar flase ou true e mostrar no console
+//Função de checkbox marcar false ou true e mostrar no console
 const onCheckboxClick = (event) => {
     const [id] = event.target.id.split('-');
 
@@ -118,7 +118,7 @@ const getCheckboxInput = ({id, description, checked}) => {
     return wrapper;
 }
 
-//funçãqo de pegar novo id
+//função de pegar novo id
 const getNewTaskId = () => {
     const tasks = getTasksFromLocalStorage();
     const lastId = tasks[tasks.length - 1]?.id;
@@ -146,7 +146,7 @@ const getCreatedTaskInfo = (event) => new Promise((resolve) =>{
 //Função que previne que a página recarregue com o description igual ao que foi escrito no input
 const createTask = async (event) => { //virou uma função assíncrona
     event.preventDefault();
-    document.getElementById('save-button').setAttribute('disabled', true) //estou falando que durante os tr~es segundos de ativação, o botão está desativado. 
+    document.getElementById('save-button').setAttribute('disabled', true) //estou falando que durante os três segundos de ativação, o botão está desativado. 
 
     const newTaskData = await getCreatedTaskInfo(event);
     //const {description, id} = newTaskData;
