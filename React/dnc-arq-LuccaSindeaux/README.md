@@ -1,12 +1,21 @@
 # React + Vite
+O Vite é um software que permite a criação de projetos em frameworks específicos como React e o Svelvte.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1 - Forma de instalar:
+    Com o node baixado, executar o comando "npm create vite@latest"
 
-Currently, two official plugins are available:
+    No terminal, definir o nome do projeto, o ideal é fazer com hifens. Quando o nome for definido, após pressionar ENTER, seleciona-se o framework que vai ser usado, neste caso selecionasse o React com a variante JavaScript.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    O npm rund dev vai permitir que o código vite base criado possa ser visualizado no navegador num porta de localhost definida.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2 - CSS base:
+    O React via vite vem com um aquivo App.css. Normalmente apagamos ele e criamos um main.css, lá criamos nossa base de estilos. No React, por padrão de agilidade, definimos configurações de estilo css via classes e só as chamamso em nossas tags html. Exemplos abaixo:
+            .d-flex{
+                display: flex;
+            }
+            .fd-column{
+                flex-direction: column;
+            }
+            .jc-center{
+                justify-content: center;
+            }
